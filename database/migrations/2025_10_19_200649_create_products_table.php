@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->text('description')->nullable();
             $table->decimal('price');
             $table->integer('stock');
-            $table->dateTime('released_at');
+            $table->dateTime('released_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->foreignIdFor(User::class, 'author_id')->constrained('users');
             $table->string('title');
             $table->text('content');
-            $table->dateTime('published_at');
+            $table->dateTime('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
