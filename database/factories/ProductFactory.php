@@ -18,7 +18,7 @@ class ProductFactory extends Factory
             'creator_id' => User::factory(),
             'name' => $this->faker->name(),
             'description' => $this->faker->text(),
-            'price' => $this->faker->word(),
+            'price' => $this->faker->randomFloat(2, 0, 1000),
             'stock' => $this->faker->randomNumber(),
         ];
     }
