@@ -29,7 +29,7 @@ trait Publishable
 
     public function published(): bool
     {
-        return isset($this->{$this->getPublishedAtColumn()});
+        return !is_null($this->{$this->getPublishedAtColumn()});
     }
 
     public function getPublishedAtColumn()
